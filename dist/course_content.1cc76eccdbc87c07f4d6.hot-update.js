@@ -7,11 +7,11 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-self["webpackHotUpdateUniversity_of_love"]("index",{},
+self["webpackHotUpdateUniversity_of_love"]("course_content",{},
 /******/ function(__webpack_require__) { // webpackRuntimeModules
 /******/ /* webpack/runtime/getFullHash */
 /******/ (() => {
-/******/ 	__webpack_require__.h = () => ("cc1d0a9a5557b5602003")
+/******/ 	__webpack_require__.h = () => ("b39ed50d7415e879395c")
 /******/ })();
 /******/ 
 /******/ }
