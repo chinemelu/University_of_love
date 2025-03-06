@@ -1,0 +1,54 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root {
+        --primary: #018CF0;
+        --secondary: #043274;
+    }
+    .home {
+        &__img {
+            background: linear-gradient(var(--primary), var(--secondary)), (url("../../../public/img/home-cover-md.png") 1x, url("../../../public/img/home-cover-md.png") 2x);
+        }
+        &__image-text {
+            position: absolute;
+            inset: 0.5rem;
+            top: 10%;
+            width: 90%;
+            margin: auto;
+            z-index: 2
+        }
+    }
+    h1, p {
+        color: #fff
+    }
+    h1 {
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
+    p {
+        font-size: 2.4rem;
+        font-weight: 400;
+        margin-top: 2rem;
+    }
+    button {
+        border: none;
+        background-color: transparent;
+        border-radius: 100px;
+        color: #fff;
+        outline: 2px solid #fff;
+        padding: 1rem 1.5rem;
+        font-size: 2.4rem;
+        margin-top: 3rem
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

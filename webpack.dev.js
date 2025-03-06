@@ -9,7 +9,8 @@ module.exports = merge(common, {
         historyApiFallback: true,
         port: 8000,
         devMiddleware: {
-            writeToDisk: true
+            writeToDisk: true,
+            publicPath: '/'
         },
         watchFiles: ['src/**/*'],
     }

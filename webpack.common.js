@@ -1,3 +1,4 @@
+// const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -18,7 +19,8 @@ const generatedHTMLWebpackPlugins = function(arr) {
                 template: `src/views/${fileName}/index.html`,
                 inject: true,
                 chunks: [fileName],
-                filename: `${fileName}.html`
+                filename: `${fileName}.html`,
+                publicPath: '/'
             })
         )
     }
@@ -27,7 +29,7 @@ const generatedHTMLWebpackPlugins = function(arr) {
 
 module.exports = {
     entry: {
-        index: './src/views/home/index.ts',
+        home: './src/views/home/index.ts',
         about: './src/views/about/index.ts',
         course_content: './src/views/course_content/index.ts',
         content_pages: './src/views/content_pages/index.ts'
