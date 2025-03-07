@@ -1,4 +1,4 @@
-// const path = require('path');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -35,6 +35,9 @@ module.exports = {
         content_pages: './src/views/content_pages/index.ts'
     },
     output: {
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'images',
+        publicPath: '/',
         clean: true
     },
     module: {
@@ -62,16 +65,10 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|svg|ico)/,
                 type: 'asset/resource',
-                generator: {
-                    filename: 'assets/fonts/[name].[hash:8][ext]',
-                },
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'assets/img/[name].[hash:8][ext]',
-                },
+                type: 'asset/resource'
             },
         ],
     },

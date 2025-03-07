@@ -1,20 +1,83 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     :root {
-        --primary: #018CF0;
-        --secondary: #043274;
+        --primary: rgba(1, 140, 240, 0.9);
+        --secondary: rgba(4, 50, 116, 0.9);
+        ---white: #fff
     }
     .home {
-        &__img {
-            background: linear-gradient(var(--primary), var(--secondary)), (url("../../../public/img/home-cover-md.png") 1x, url("../../../public/img/home-cover-md.png") 2x);
+        &__logo {
+            color: var(---white);
+            font-weight: 700;
+        }
+        &__logo-upper-text {
+            font-size: 1.4rem;
+            margin-top: 0;
+            font-weight: inherit;
+        }
+        &__logo-lower-text {
+            font-size: 0.8rem;
+            margin-top: 0;
+            font-weight: inherit;
+        }
+        &__background-image {
+            position: relative;
+            background: linear-gradient(89.88deg, var(--primary) 0.1%, var(--secondary) 99.9%), url('../../../public/home-cover-sm.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;        
+            height: 700px;
+        }
+        &__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0 0;
+            margin: 0 auto;
+            width: 90%;
+        }
+        &__nav-mobile-toggle {
+            position: relative;
+            width: 1.8rem;
+            height: 2px;
+            background-color: var(---white);
+            border: none;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                top: 5px;
+                background-color: inherit;
+                left: 0;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: inherit;
+                bottom: 5px;
+                left: 0;
+            }
         }
         &__image-text {
             position: absolute;
-            inset: 0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
             top: 10%;
             width: 90%;
-            margin: auto;
-            z-index: 2
+            margin: 3rem auto;
+        }
+        &__start-therapy-btn {
+            border: none;
+            background-color: transparent;
+            border-radius: 100px;
+            color: #fff;
+            outline: 2px solid #fff;
+            padding: 1rem 1.5rem;
+            font-size: 2.4rem;
+            margin-top: 3rem
         }
     }
     h1, p {
@@ -29,16 +92,7 @@
         font-weight: 400;
         margin-top: 2rem;
     }
-    button {
-        border: none;
-        background-color: transparent;
-        border-radius: 100px;
-        color: #fff;
-        outline: 2px solid #fff;
-        padding: 1rem 1.5rem;
-        font-size: 2.4rem;
-        margin-top: 3rem
-    }
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
