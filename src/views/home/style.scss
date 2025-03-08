@@ -6,6 +6,13 @@
         ---white: #fff
     }
     .home {
+        position: relative;
+        background: linear-gradient(89.88deg, var(--primary) 0.1%, var(--secondary) 99.9%), url('../../../public/home-cover-sm.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        overflow: hidden;        
+        height: 95rem;
         &__logo {
             color: var(---white);
             font-weight: 700;
@@ -19,14 +26,6 @@
             font-size: 0.8rem;
             margin-top: 0;
             font-weight: inherit;
-        }
-        &__background-image {
-            position: relative;
-            background: linear-gradient(89.88deg, var(--primary) 0.1%, var(--secondary) 99.9%), url('../../../public/home-cover-sm.png');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;        
-            height: 700px;
         }
         &__nav {
             display: flex;
@@ -78,6 +77,22 @@
             padding: 1rem 1.5rem;
             font-size: 2.4rem;
             margin-top: 3rem
+        }
+        &__couple-image {
+            position: absolute;
+            border-radius: 10rem 10rem 10rem 0;
+            width: 22rem;
+            height: 47.8rem;
+            object-fit: cover;
+            bottom: -8rem;
+            left: -4rem;
+        }
+
+        &__couple-image-container {
+            position: absolute;
+            outline: 50px solid var(--white);
+            bottom: -8rem;
+            left: 0;
         }
     }
     h1, p {
