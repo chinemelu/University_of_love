@@ -5,31 +5,40 @@ declare const _exports: {
         course_content: string;
         content_pages: string;
     };
-    output: {
-        path: string;
-        assetModuleFilename: string;
-        clean: boolean;
-    };
     module: {
         rules: ({
             test: RegExp;
             use: string;
             exclude: RegExp;
             type?: undefined;
+            generator?: undefined;
         } | {
             test: RegExp;
             use: string[];
             exclude?: undefined;
             type?: undefined;
+            generator?: undefined;
         } | {
             test: RegExp;
             type: string;
+            generator: {
+                filename: string;
+            };
             use?: undefined;
             exclude?: undefined;
+        } | {
+            test: RegExp;
+            use: string;
+            exclude?: undefined;
+            type?: undefined;
+            generator?: undefined;
         })[];
     };
     resolve: {
         extensions: string[];
+        alias: {
+            images: string;
+        };
     };
     plugins: import("html-webpack-plugin")[];
 };
