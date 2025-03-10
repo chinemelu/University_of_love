@@ -36,7 +36,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'images',
+        assetModuleFilename: 'images/[name][ext]',
         publicPath: '/',
         clean: true
     },
@@ -60,7 +60,7 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"]
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             },
             {
                 test: /\.(png|jpe?g|svg|ico)/,
