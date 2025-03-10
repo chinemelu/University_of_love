@@ -20,7 +20,6 @@ const generatedHTMLWebpackPlugins = function(arr) {
                 inject: true,
                 chunks: [fileName],
                 filename: `${fileName}.html`,
-                publicPath: '/'
             })
         )
     }
@@ -36,8 +35,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'images',
-        publicPath: '/',
+        assetModuleFilename: 'images/[name][ext]',
         clean: true
     },
     module: {
@@ -60,7 +58,7 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"]
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             },
             {
                 test: /\.(png|jpe?g|svg|ico)/,
@@ -70,6 +68,10 @@ module.exports = {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
                 type: 'asset/resource'
             },
+            {
+                test: /\.html/,
+                type: 'asset/resource'
+            }
         ],
     },
     resolve: {
