@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
-const path = require('path');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+const path = require('path')
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 
@@ -9,9 +10,24 @@ module.exports = merge(common, {
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'assets/[name][ext]',
         clean: true
     },
     plugins: [
-        new MiniCssExtractPlugin(),
-    ]
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css',
+            chunkFilename: '[id].[contenthash].css'
+        })
+    ],
+    optimization: {
+    minimize: true,
+        minimizer: [
+            // https://webpack.js.org/plugins/terser-webpack-plugin/
+            new TerserPlugin({
+                parallel: true
+            }),
+            // https://webpack.js.org/plugins/mini-css-extract-plugin/#minimizing-for-production
+            new CssMinimizerPlugin()
+        ]
+    }
 });

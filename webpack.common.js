@@ -20,6 +20,7 @@ const generatedHTMLWebpackPlugins = function(arr) {
                 inject: true,
                 chunks: [fileName],
                 filename: `${fileName}.html`,
+                // publicPath: '/'  this will add / to the file path e.g /home.3a5ecb32702fb8edadc2.js
             })
         )
     }
@@ -33,11 +34,11 @@ module.exports = {
         course_content: './src/views/course_content/index.ts',
         content_pages: './src/views/content_pages/index.ts'
     },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'images/[name][ext]',
-        clean: true
-    },
+    // output: {
+    //     path: path.resolve(__dirname, 'dist'),
+    //     assetModuleFilename: 'assets/[name][ext]',
+    //     clean: true
+    // },
     module: {
         rules: [
             {
@@ -63,19 +64,28 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|svg|ico)/,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'assets/images/[name][ext]'
+                }
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                type: 'asset/resource'
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[name][ext]'
+                }
             },
             {
-                test: /\.html/,
-                type: 'asset/resource'
+                test: /\.(html)$/,
+                use: 'html-loader'
             }
         ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+            images: path.resolve(__dirname, 'src/images')
+        }
     },
     plugins: generatedHTMLWebpackPlugins(fileArray),
 };

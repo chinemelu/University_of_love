@@ -203,9 +203,7 @@
                 }
             }
             &__arrow-downward {
-                // border: 1px solid red;
-                // font-size: 18rem;
-                // margin: 5rem 0;
+                font-family: 'sans-serif';
                 color: var(--light-blue-1);
                 &::after {
                     content: "\2193";
