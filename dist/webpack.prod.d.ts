@@ -8,7 +8,6 @@ declare const _exports: {
     output: {
         path: string;
         assetModuleFilename: string;
-        publicPath: string;
         clean: boolean;
     };
     module: {

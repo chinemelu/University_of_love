@@ -8,7 +8,6 @@ export namespace entry {
 export namespace output {
     let path: string;
     let assetModuleFilename: string;
-    let publicPath: string;
     let clean: boolean;
 }
 export namespace module {

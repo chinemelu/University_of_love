@@ -20,7 +20,7 @@ const generatedHTMLWebpackPlugins = function(arr) {
                 inject: true,
                 chunks: [fileName],
                 filename: `${fileName}.html`,
-                publicPath: '/'
+                // publicPath: '/'  this will add / to the file path e.g /home.3a5ecb32702fb8edadc2.js
             })
         )
     }
@@ -37,7 +37,6 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: 'images/[name][ext]',
-        publicPath: '/',
         clean: true
     },
     module: {
