@@ -147,7 +147,7 @@
                 &:not(:first-child) {
                     margin-top: 5rem;
                 }
-                & > img {
+                & > picture > img {
                     width: 10rem;
                     height: 10rem;
                 }
@@ -178,7 +178,7 @@
                 &:not(:first-child) {
                     margin-top: 1rem;
                 }
-                & > img {
+                & > picture > img {
                     width: 15rem;
                     object-fit: cover;
                     height: 15rem;
@@ -258,7 +258,7 @@
                 &:not(:first-child) {
                     margin-top: 3rem
                 }
-                & > img {
+                & > picture > img {
                     position: relative;
                     width: 30rem;
                     height: 40.3rem;
@@ -455,7 +455,7 @@
                 &:not(:first-child) {
                     margin-top: 0;
                 }
-                & > img {
+                & > picture > img {
                     // width: 10rem;
                     // height: 10rem;
                 }
@@ -493,7 +493,7 @@
                 &:not(:first-child) {
                     margin-top: 0;
                 }
-                & > img {
+                & > picture > img {
                     // flex-basis: 65%;
                     width: 40rem;
                     height: auto;
@@ -551,7 +551,7 @@
                 &:not(:first-child) {
                     margin-left: 3.5rem;
                 }
-                & > img {
+                & > picture > img {
                     position: relative;
                     width: 30rem;
                     height: 40.3rem;
