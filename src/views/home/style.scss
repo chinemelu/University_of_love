@@ -9,7 +9,7 @@
     }
     .home {
         position: relative;
-        background: linear-gradient(89.88deg, var(--primary) 0.1%, var(--secondary) 99.9%), url('../../../public/home/home-cover-sm.png');
+        background: linear-gradient(89.88deg, var(--primary) 0.1%, var(--secondary) 99.9%), url('../../images/home/home-cover-sm.png');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -224,6 +224,79 @@
                 border-bottom: 5px solid var(--light-blue-1);
             }
         }
+        &__what-we-offer-section {
+            padding: 5rem 2rem;
+            margin-top: 3px;
+            & > h2 {
+                display: none
+            }
+            & > div  {
+                & > h2 {
+                    font-size: 3rem;
+                    text-align: center;
+                }
+                & > p {
+                    font-size: 1.4rem;
+                    color: var(--light-grey-1);
+                    margin-top: 1rem;
+                    text-align: center;
+                }
+            }
+            &__cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &__card {
+                // width: 100%;
+                // border: 2px solid red;
+                overflow-y: hidden;
+                position: relative;
+                &:first-child {
+                    margin-top: 3.5rem;
+                }
+                &:not(:first-child) {
+                    margin-top: 3rem
+                }
+                & > img {
+                    position: relative;
+                    width: 30rem;
+                    height: 40.3rem;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+            }
+            &__card-description {
+                position: absolute;
+                opacity: 0.85;
+                background: #00000094;
+                width: 100%;
+                bottom: 0; 
+                left: 0;
+                right: 0;
+                padding: 2.5rem 1.5rem;
+                backdrop-filter: blur(51px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                & > h3 {
+                    font-weight: 500;
+                    color: var(--white);
+                    font-size: 1.6rem;
+                }
+                & > button {
+                    width: 15rem;
+                    padding: 5px 1rem;
+                    font-weight: 400;
+                    color: var(--white);
+                    font-size: 1.5rem;
+                    border: 1px solid var(--white);
+                    border-radius: 5rem;
+                    background-color: transparent;
+                    margin-top: 1rem;
+                }
+            }
+        }
     }
     
     
@@ -428,7 +501,93 @@
                 }
             }
             &__item-text {
-                // flex-basis: 40%;
+                flex-basis: 45%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                & > p {
+                    text-align: left;
+                }
+            }
+        }
+        &__what-we-offer-section {    
+            padding: 0 5rem;   
+            & > h2 {
+                font-weight: 500;
+                display: inline-block;
+                border-bottom: 1px solid var(--light-blue-1);
+                color: var(--light-blue-1);
+                font-size: 2rem;
+                padding-right: 1rem;
+                margin-bottom: 2rem;
+            }
+            & > div  {
+                display: flex;
+                justify-content: space-between;
+                text-align: left;
+                & > h2 {
+                    flex-basis: 60%;
+                    text-align: inherit;
+                }
+                & > p {
+                    flex: 1;
+                    text-align: inherit;
+                }
+            }     
+            &__cards {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &__card {
+                // width: 100%;
+                // border: 2px solid red;
+                overflow-y: hidden;
+                position: relative;
+                // &:first-child {
+                //     margin-left: 3.5rem;
+                // }
+                &:not(:first-child) {
+                    margin-left: 3.5rem;
+                }
+                & > img {
+                    position: relative;
+                    width: 30rem;
+                    height: 40.3rem;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+            }
+            &__card-description {
+                position: absolute;
+                opacity: 0.85;
+                background: #00000094;
+                width: 100%;
+                bottom: 0; 
+                left: 0;
+                right: 0;
+                padding: 2.5rem 1.5rem;
+                backdrop-filter: blur(51px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                & > h3 {
+                    font-weight: 500;
+                    color: var(--white);
+                    font-size: 1.6rem;
+                }
+                & > button {
+                    width: 15rem;
+                    padding: 5px 1rem;
+                    font-weight: 400;
+                    color: var(--white);
+                    font-size: 1.5rem;
+                    border: 1px solid var(--white);
+                    border-radius: 5rem;
+                    background-color: transparent;
+                    margin-top: 1rem;
+                }
             }
         }
     }
