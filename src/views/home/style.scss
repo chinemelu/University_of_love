@@ -10,8 +10,10 @@
         --black: #000;
         --light-blue-1: #018CF0;
         --light-blue-2: #0056D2;
+        --light-blue-3: #DCF1F8;
         --light-grey-1: #727272;
         --light-grey-2: #EFF2F3;
+        --light-grey-3: #A8B0B4;
         --dark-blue-1: #0A3D62;
     }
     .home {
@@ -244,7 +246,7 @@
                     text-align: center;
                 }
                 & > p {
-                    font-size: 1.4rem;
+                    font-size: 1.6rem;
                     color: var(--light-grey-1);
                     margin-top: 1rem;
                     text-align: center;
@@ -347,6 +349,65 @@
                     border-radius: 100%;
                     margin-right: 2rem;
                 }
+            }
+        }
+        &__relationship-wisdom-section {
+            padding: 5rem 2rem;
+            margin-top: 3px;
+            background-color: var(--light-blue-3);
+            & > h2 {
+                color: var(--dark-blue-1);
+                font-size: 3rem;
+                text-align: center;
+            }
+            & > p {
+                font-size: 1.6rem;
+                color: var(--light-grey-3);
+                margin-top: 1rem;
+                text-align: center;
+            }
+            &__cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 3rem;
+            }
+            &__card {
+                position: relative;
+                &:not(:first-child) {
+                    margin-top: 2rem;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 2;
+                        border-radius: 3.5rem;
+                        backdrop-filter: blur(3px);
+                    }
+                }
+            }
+            &__heading {
+                position: absolute;
+                background: #00000094;
+                backdrop-filter: blur(51px);
+                border-radius: 0 0 3.5rem 3.5rem;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 2rem 2.5rem;
+                font-weight: 700;
+                font-size: 1.6rem;
+                color: var(--white)
+            }
+            &__image {
+                width: 30rem;
+                height: 30rem;
+                object-fit: cover;
+                border-radius: 3.5rem;
             }
         }
     }
@@ -594,6 +655,7 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
+                margin-top: 3rem
             }
             &__card {
                 // width: 100%;
@@ -602,6 +664,7 @@
                 position: relative;
                 flex-basis: 24%;
                 min-width: 25rem;
+                margin-top: 0;
                 // &:not(:first-child) {
                 //     margin-left: 2rem;
                 // }
@@ -660,6 +723,26 @@
                 min-width: 25rem;
                 &:not(:first-child) {
                     margin-left: 2rem;
+                }
+            }
+        }
+        &__relationship-wisdom-section {
+            overflow-x: auto;
+            &__cards {
+                flex-direction: row-reverse;
+                justify-content: center;
+                // border: 1px solid red;
+                
+                margin: 2rem auto;
+            }
+            &__card {
+                // margin-right: -25%;
+                &:first-child {
+                    // z-index: 2;
+                }
+                &:not(:first-child) { 
+                    margin-top: 0;
+                   
                 }
             }
         }

@@ -4,10 +4,17 @@
         <meta charset="utf-8">
         <meta name="description" content="Home page of university of love">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" rel="preload">
-        <title>Home</title> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.onload=null;this.rel='stylesheet';this.removeAttribute('as')" as="style">
+        <link async  rel="stylesheet" rel="preload">
+        <title>Home</title> 
+        
+        <!-- no-JS fallback -->
+        <noscript>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+        </noscript>
+        
     </head>
     <body>
         <header class="home"> 
@@ -228,6 +235,7 @@
                 </div>
             </section>
 
+            <!-- TESTIMONIALS SECTION -->
 
             <section class="home__life-stories-section">
                 <h2>OUR TESTIMONIALS</h2>
@@ -283,6 +291,71 @@
                         </div>
                     </article>
             
+                </div>
+            </section>
+
+            <!-- RELATIONSHIP WISDOM SECTION -->
+
+            <section class="home__relationship-wisdom-section">
+                <h2>Relationship Wisdom</h2>
+                <p>Tips, Insights, and Support</p>
+                
+                <div class="home__relationship-wisdom-section__cards">
+                    <article class="home__relationship-wisdom-section__card">
+                        <div class="home__relationship-wisdom-section__heading">
+                            <p>The will of God is the Word of God and the word of God is Love</p>
+                        </div>
+                        <picture>
+                            <source srcset="../../images/home/word-of-God-sm.webp" type="image/webp" />
+                            <img
+                                src="../../images/home/word-of-God-sm.png"
+                                class="home__relationship-wisdom-section__image"
+                                alt="Two hands holding a bible"
+                            > 
+                        </picture> 
+                    </article>
+
+                    <article class="home__relationship-wisdom-section__card">
+                        <div class="home__relationship-wisdom-section__heading">
+                            <p>The will of God is the Word of God and the word of God is Love</p>
+                        </div>
+                        <picture>
+                            <source srcset="../../images/home/couple-holding-hands-sm.webp" type="image/webp" />
+                            <img
+                                src="../../images/home/couple-holding-hands-sm.jpeg"
+                                class="home__relationship-wisdom-section__image"
+                                alt="Two hands holding a bible"
+                            > 
+                        </picture> 
+                    </article>
+
+                    <article class="home__relationship-wisdom-section__card">
+                        <div class="home__relationship-wisdom-section__heading">
+                            <p>The will of God is the Word of God and the word of God is Love</p>
+                        </div>
+                        <picture>
+                            <source srcset="../../images/home/couple-holding-hands-sm.webp" type="image/webp" />
+                            <img
+                                src="../../images/home/couple-holding-hands-sm.jpeg"
+                                class="home__relationship-wisdom-section__image"
+                                alt="Two hands holding a bible"
+                            > 
+                        </picture> 
+                    </article>
+
+                    <article class="home__relationship-wisdom-section__card">
+                        <div class="home__relationship-wisdom-section__heading">
+                            <p>The will of God is the Word of God and the word of God is Love</p>
+                        </div>
+                        <picture>
+                            <source srcset="../../images/home/family-sm.webp" type="image/webp" />
+                            <img
+                                src="../../images/home/family-sm.png"
+                                class="home__relationship-wisdom-section__image"
+                                alt="Two hands holding a bible"
+                            > 
+                        </picture> 
+                    </article>
                 </div>
             </section>
         </main>
