@@ -1,6 +1,7 @@
 declare const _exports: {
     entry: {
         home: string;
+        contact: string;
         about: string;
         course_content: string;
         content_pages: string;
@@ -36,9 +37,6 @@ declare const _exports: {
     };
     resolve: {
         extensions: string[];
-        alias: {
-            images: string;
-        };
     };
     plugins: import("html-webpack-plugin")[];
 };

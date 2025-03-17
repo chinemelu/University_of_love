@@ -36,11 +36,6 @@ module.exports = {
         course_content: './src/views/course_content/index.ts',
         content_pages: './src/views/content_pages/index.ts'
     },
-    // output: {
-    //     path: path.resolve(__dirname, 'dist'),
-    //     assetModuleFilename: 'assets/[name][ext]',
-    //     clean: true
-    // },
     module: {
         rules: [
             {
@@ -86,5 +81,7 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js']
     },
-    plugins: generatedHTMLWebpackPlugins(fileArray),
+    plugins: [
+        ...generatedHTMLWebpackPlugins(fileArray),   
+    ]
 };

@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin = require("html-webpack-plugin");
 export namespace entry {
     let home: string;
+    let contact: string;
     let about: string;
     let course_content: string;
     let content_pages: string;
@@ -36,8 +37,5 @@ export namespace module {
 }
 export namespace resolve {
     let extensions: string[];
-    namespace alias {
-        let images: string;
-    }
 }
 export let plugins: HtmlWebpackPlugin[];
