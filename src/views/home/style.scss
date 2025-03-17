@@ -916,10 +916,12 @@
         }
         &__about {
             flex-basis: 30%;
+            & > p:not(::first-line) {
+                line-height: 3.5rem;
+            }
             & > p {
                 margin-top: 1rem;
                 font-size: 1.4rem;
-                line-height: 3.5rem;
             }
             & > ul {
                 display: flex;
@@ -948,9 +950,11 @@
             }
         }
         &__contact {
-            & > p:nth-child(2){
-                margin-top: 1.2rem;
+            & > p:nth-child(2) {
+                margin-top: 1rem;
                 font-size: 1.4rem;
+            }
+            & > p:nth-child(2):not(::first-line){
                 line-height: 3.5rem;
             }
             & ul > li {

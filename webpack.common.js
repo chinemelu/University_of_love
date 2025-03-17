@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const fileArray = [
         'home',
+        'contact',
         'about',
         'content_pages',
         'course_content'
@@ -30,15 +31,11 @@ const generatedHTMLWebpackPlugins = function(arr) {
 module.exports = {
     entry: {
         home: './src/views/home/index.ts',
+        contact: './src/views/contact/index.ts',
         about: './src/views/about/index.ts',
         course_content: './src/views/course_content/index.ts',
         content_pages: './src/views/content_pages/index.ts'
     },
-    // output: {
-    //     path: path.resolve(__dirname, 'dist'),
-    //     assetModuleFilename: 'assets/[name][ext]',
-    //     clean: true
-    // },
     module: {
         rules: [
             {
@@ -82,10 +79,9 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-        alias: {
-            images: path.resolve(__dirname, 'src/images')
-        }
+        extensions: ['.tsx', '.ts', '.js']
     },
-    plugins: generatedHTMLWebpackPlugins(fileArray),
+    plugins: [
+        ...generatedHTMLWebpackPlugins(fileArray),   
+    ]
 };
