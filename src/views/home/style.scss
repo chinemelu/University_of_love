@@ -3,20 +3,6 @@
     body {
         overflow-x: clip;
     }
-    :root {
-        --primary: rgba(1, 140, 240, 0.9);
-        --secondary: rgba(4, 50, 116, 0.9);
-        --white: #fff;
-        --black: #000;
-        --light-blue-1: #018CF0;
-        --light-blue-2: #0056D2;
-        --light-blue-3: #DCF1F8;
-        --light-grey-1: #727272;
-        --light-grey-2: #EFF2F3;
-        --light-grey-3: #A8B0B4;
-        --dark-blue-1: #0A3D62;
-        --dark-blue-2: #032352;
-    }
     .home {
         position: relative;
         background: linear-gradient(89.88deg, var(--primary) 0.1%, var(--secondary) 99.9%), url('../../images/home/home-cover-sm.png');
