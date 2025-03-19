@@ -7,10 +7,26 @@
 }
 
 html {
-  font-size: 62.5%
+  font-size: 62.5%;
 }
 
 body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary: rgba(1, 140, 240, 0.9);
+  --secondary: rgba(4, 50, 116, 0.9);
+  --white: #fff;
+  --black: #000;
+  --light-blue-1: #018CF0;
+  --light-blue-2: #0056D2;
+  --light-blue-3: #DCF1F8;
+  --light-grey-1: #727272;
+  --light-grey-2: #EFF2F3;
+  --light-grey-3: #A8B0B4;
+  --light-grey-4: #A7A7A7;
+  --dark-blue-1: #0A3D62;
+  --dark-blue-2: #032352;
 }
