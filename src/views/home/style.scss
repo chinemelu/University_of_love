@@ -677,15 +677,6 @@
                 &:not(:first-child) {
                     margin-top: 0;
                 }
-                & > picture > img {
-                    // width: 10rem;
-                    // height: 10rem;
-                }
-                & > p {
-                    // margin-top: 5px;
-                    // font-size: 2rem;
-                    // text-align: center;
-                }
             }
         }
         &__features {
