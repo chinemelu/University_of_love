@@ -13,12 +13,14 @@ declare const _exports: {
             exclude: RegExp;
             type?: undefined;
             generator?: undefined;
+            loader?: undefined;
         } | {
             test: RegExp;
             use: string[];
             exclude?: undefined;
             type?: undefined;
             generator?: undefined;
+            loader?: undefined;
         } | {
             test: RegExp;
             type: string;
@@ -27,9 +29,11 @@ declare const _exports: {
             };
             use?: undefined;
             exclude?: undefined;
+            loader?: undefined;
         } | {
             test: RegExp;
-            use: string;
+            loader: string;
+            use?: undefined;
             exclude?: undefined;
             type?: undefined;
             generator?: undefined;
@@ -38,6 +42,6 @@ declare const _exports: {
     resolve: {
         extensions: string[];
     };
-    plugins: import("html-webpack-plugin")[];
+    plugins: (import("html-webpack-plugin") | import("html-webpack-partials-plugin"))[];
 };
 export = _exports;

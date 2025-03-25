@@ -1,4 +1,5 @@
 import HtmlWebpackPlugin = require("html-webpack-plugin");
+import HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
 export namespace entry {
     let home: string;
     let contact: string;
@@ -13,12 +14,14 @@ export namespace module {
         exclude: RegExp;
         type?: undefined;
         generator?: undefined;
+        loader?: undefined;
     } | {
         test: RegExp;
         use: string[];
         exclude?: undefined;
         type?: undefined;
         generator?: undefined;
+        loader?: undefined;
     } | {
         test: RegExp;
         type: string;
@@ -27,9 +30,11 @@ export namespace module {
         };
         use?: undefined;
         exclude?: undefined;
+        loader?: undefined;
     } | {
         test: RegExp;
-        use: string;
+        loader: string;
+        use?: undefined;
         exclude?: undefined;
         type?: undefined;
         generator?: undefined;
@@ -38,4 +43,4 @@ export namespace module {
 export namespace resolve {
     let extensions: string[];
 }
-export let plugins: HtmlWebpackPlugin[];
+export let plugins: (HtmlWebpackPlugin | HtmlWebpackPartialsPlugin)[];
