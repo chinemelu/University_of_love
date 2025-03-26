@@ -91,18 +91,23 @@
                     </section>
                 </article>
 
-
-
                 <article class="contact__faqs-container">
-                    <article class="contact__faqs__image">
-                        
+                    <article class="contact__faqs__image-container">
+                        <picture>
+                            <source srcset="../../images/contact/couple-making-heart-sign-sm.webp" type="image/webp" />
+                            <img
+                                src="../../images/contact/couple-making-heart-sign-sm.png"
+                                class="contact__faqs__image"
+                                alt="Couple makign heart sign"
+                            > 
+                        </picture> 
                     </article>
                     <section class="contact__faqs">
                         <h2 class="contact__heading contact__heading--primary">FAQs</h2>
                         <h3 class="contact__heading--secondary">Your Questions Answered</h3>
                         <div class="contact__faqs__card">
                             <input type="checkbox" id="contact__question-1"/>
-                            <label for="contact__question-1">
+                            <label class="contact__faqs__question-container" for="contact__question-1">
                                 <p class="contact__faqs__question">How long does it take to get a response?</p>
                                 <div>
                                     <img class="contact__faqs__plus-icon" src="../../images/contact/cross-icon.png">
@@ -115,7 +120,7 @@
                         </div>
                         <div class="contact__faqs__card">
                             <input type="checkbox" id="contact__question-2"/>
-                            <label for="contact__question-2">
+                            <label for="contact__question-2" class="contact__faqs__question-container">
                                 <p class="contact__faqs__question">Do you offer free consultations?</p>
                                 <div>
                                     <img class="contact__faqs__plus-icon" src="../../images/contact/cross-icon.png">
@@ -128,7 +133,7 @@
                         </div>
                         <div class="contact__faqs__card">
                             <input type="checkbox" id="contact__question-3"/>
-                            <label for="contact__question-3">
+                            <label for="contact__question-3" class="contact__faqs__question-container">
                                 <p class="contact__faqs__question">How can I reschedule a session?</p>
                                 <div>
                                     <img class="contact__faqs__plus-icon" src="../../images/contact/cross-icon.png">

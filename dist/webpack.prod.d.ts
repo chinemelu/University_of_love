@@ -42,6 +42,6 @@ declare const _exports: {
     resolve: {
         extensions: string[];
     };
-    plugins: (import("html-webpack-plugin") | import("html-webpack-partials-plugin"))[];
+    plugins: import("html-webpack-plugin")[];
 };
 export = _exports;

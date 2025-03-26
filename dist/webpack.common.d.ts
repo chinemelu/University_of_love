@@ -1,5 +1,4 @@
 import HtmlWebpackPlugin = require("html-webpack-plugin");
-import HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
 export namespace entry {
     let home: string;
     let contact: string;
@@ -43,4 +42,4 @@ export namespace module {
 export namespace resolve {
     let extensions: string[];
 }
-export let plugins: (HtmlWebpackPlugin | HtmlWebpackPartialsPlugin)[];
+export let plugins: HtmlWebpackPlugin[];
