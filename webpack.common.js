@@ -48,7 +48,7 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             },
             {
-                test: /\.(png|jpe?g|svg|ico)/,
+                test: /\.(png|jpe?g|svg|ico|webp|avif)/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/images/[name][ext]'
@@ -62,8 +62,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.(html)$/,
-                use: 'html-loader'
+                test: /\.html$/i,
+                loader: "html-loader",
             }
         ],
     },
@@ -71,6 +71,6 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js']
     },
     plugins: [
-        ...generatedHTMLWebpackPlugins(fileArray),   
+        ...generatedHTMLWebpackPlugins(fileArray)
     ]
 };

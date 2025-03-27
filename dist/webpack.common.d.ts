@@ -13,12 +13,14 @@ export namespace module {
         exclude: RegExp;
         type?: undefined;
         generator?: undefined;
+        loader?: undefined;
     } | {
         test: RegExp;
         use: string[];
         exclude?: undefined;
         type?: undefined;
         generator?: undefined;
+        loader?: undefined;
     } | {
         test: RegExp;
         type: string;
@@ -27,9 +29,11 @@ export namespace module {
         };
         use?: undefined;
         exclude?: undefined;
+        loader?: undefined;
     } | {
         test: RegExp;
-        use: string;
+        loader: string;
+        use?: undefined;
         exclude?: undefined;
         type?: undefined;
         generator?: undefined;
