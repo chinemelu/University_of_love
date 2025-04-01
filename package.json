@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --config webpack.dev.js",
+    "build": "export NODE_ENV=production && webpack --config webpack.prod.js",
+    "start": "export NODE_ENV=development && webpack serve --config webpack.dev.js",
     "lint": "eslint"
   },
   "repository": "git@github.com:chinemelu/University_of_love.git",

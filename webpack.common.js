@@ -10,6 +10,10 @@ const fileArray = [
         'course_content'
 ]
 
+console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+const isProduction = process.env.NODE_ENV === 'production'
+
+
 const generatedHTMLWebpackPlugins = function(arr) {
     const res = []
     for (let i = 0; i < arr.length; i++) {
@@ -27,6 +31,8 @@ const generatedHTMLWebpackPlugins = function(arr) {
     }
     return res
 }
+
+console.log('isProduction', isProduction)
 
 module.exports = {
     entry: {
@@ -51,14 +57,14 @@ module.exports = {
                 test: /\.(png|jpe?g|svg|ico|webp|avif)/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/images/[name][ext]'
+                    filename: 'images/[name][ext]'
                 }
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/fonts/[name][ext]'
+                    filename: 'fonts/[name][ext]'
                 }
             },
             {

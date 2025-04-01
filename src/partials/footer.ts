@@ -1,3 +1,11 @@
+const facebookLogo = require('../images/footer/facebook.png')
+const xLogo = require('../images/footer/x.png')
+const instagramLogo = require('../images/footer/instagram.png')
+const googleLogo = require('../images/footer/google.png')
+const youtubeLogo = require('../images/footer/youtube.png')
+const emailIcon = require('../images/footer/email.png')
+const phoneIcon = require('../images/footer/phone.png')
+const locationIcon = require('../images/footer/location.png')
 class FooterDefault extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -16,19 +24,19 @@ class FooterDefault extends HTMLElement {
                         </p>
                         <ul>
                             <li>
-                                <a href="https://google.com" target="_blank"><img src="/src/images/footer/facebook.png" alt="Facebook social media link" /></a>    
+                                <a href="https://google.com" target="_blank"><img src="${facebookLogo}" alt="Facebook social media link" /></a>    
                             </li>
                             <li>
-                                <a href="https://google.com" target="_blank"><img src="/src/images/footer/x.png" alt="x(formerly Twitter) social media link" /></a>
+                                <a href="https://google.com" target="_blank"><img src="${xLogo}" alt="x(formerly Twitter) social media link" /></a>
                             </li>
                             <li>
-                                <a href="https://google.com" target="_blank"><img src="/src/images/footer/instagram.png" alt="Instagram social media link" /></a>
+                                <a href="https://google.com" target="_blank"><img src="${instagramLogo}" alt="Instagram social media link" /></a>
                             </li>
                             <li>
-                                <a href="https://google.com" target="_blank"><img src="/src/images/footer/google.png" alt="Google link" /></a>
+                                <a href="https://google.com" target="_blank"><img src="${googleLogo}" alt="Google link" /></a>
                             </li>
                             <li>
-                                <a href="https://google.com" target="_blank"><img src="/src/images/footer/youtube.png" alt="Youtubelink" /></a>
+                                <a href="https://google.com" target="_blank"><img src="${youtubeLogo}" alt="Youtubelink" /></a>
                             </li>
                         </ul>
                     </div>
@@ -59,14 +67,14 @@ class FooterDefault extends HTMLElement {
                             Do you need clarity on God’s will for your love life?</p>
                         <ul>
                             <li>
-                                <img src="/src/images/footer/email.png" alt="Email" />
+                                <img src="${emailIcon}" alt="Email" />
                                 <span>Support@VirtualLoveAcademy</span>
                             <li>
-                                <img src="/src/images/footer/location.png" alt="Location" />
+                                <img src="${locationIcon}" alt="Location" />
                                 <span>123 Main Street, City, State, ZIP Code</span>
                             </li>
                             <li>
-                                <img src="/src/images/footer/phone.png" alt="Phone number" />
+                                <img src="${phoneIcon}" alt="Phone number" />
                                 <span>+1(123) 456-7890</span>
                             </li>
                         </ul>
