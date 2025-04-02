@@ -18,14 +18,24 @@
     </head>
     <body>
         <header>
-            <nav class="contact__nav" style="display: none">
+            <nav class="nav-default">
+                <a href="home.html" class="nav-default__logo">
+                    <h6>VIRTUAL</h6>
+                    <p>LOVE ACADEMY</p>
+                </a>
+
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+
+                <div class="nav-default__buttons-container">
+                    <button class="nav-default__button nav-default__button--outline">Log in </button>
+                    <button class="nav-default__button nav-default__button--solid">Get Started</button>
+                </div>  
+            
             </nav>
 
             <main>
@@ -50,21 +60,27 @@
                             better relationships.</p>
                         <ul class="contact__contact-info__list">
                             <li>
-                                <img src="../../images/contact/email-blue.png" alt="email address" />
+                                <picture>
+                                    <img src="../../images/contact/email-blue.png" alt="email address" />
+                                </picture>
                                 <div>
                                     <strong>Email Address</strong>
                                     <p>Support@VirtualLoveAcademy</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="../../images/contact/phone-blue.png" alt="email address" />
+                                <picture>
+                                    <img src="../../images/contact/phone-blue.png" alt="email address" />
+                                </picture>
                                 <div>
                                     <strong>Phone Number</strong>
                                     <p>+1(123) 456-7890</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="../../images/contact/location-blue.png" alt="email address" />
+                                <picture class="last">
+                                    <img src="../../images/contact/location-blue.png" alt="email address" />
+                                </picture>
                                 <div>
                                     <strong>Office Address</strong>
                                     <p>123 Main Street, City, State, ZIP Code</p>
