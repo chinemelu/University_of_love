@@ -24,19 +24,19 @@ class FooterDefault extends HTMLElement {
                         </p>
                         <ul>
                             <li>
-                                <a href="https://google.com" target="_blank"><img src="${facebookLogo}" alt="Facebook social media link" /></a>    
+                                <a href="https://facebook.com" target="_blank"><img src="${facebookLogo}" alt="Facebook social media link" /></a>    
                             </li>
                             <li>
-                                <a href="https://google.com" target="_blank"><img src="${xLogo}" alt="x(formerly Twitter) social media link" /></a>
+                                <a href="https://x.com" target="_blank"><img src="${xLogo}" alt="x(formerly Twitter) social media link" /></a>
                             </li>
                             <li>
-                                <a href="https://google.com" target="_blank"><img src="${instagramLogo}" alt="Instagram social media link" /></a>
+                                <a href="https://instagram.com" target="_blank"><img src="${instagramLogo}" alt="Instagram social media link" /></a>
                             </li>
                             <li>
                                 <a href="https://google.com" target="_blank"><img src="${googleLogo}" alt="Google link" /></a>
                             </li>
                             <li>
-                                <a href="https://google.com" target="_blank"><img src="${youtubeLogo}" alt="Youtubelink" /></a>
+                                <a href="https://youtube.com" target="_blank"><img src="${youtubeLogo}" alt="Youtubelink" /></a>
                             </li>
                         </ul>
                     </div>

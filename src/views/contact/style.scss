@@ -103,9 +103,26 @@
                     display: flex;
                     align-items: flex-start;
                     margin-top: 2rem; 
-                    & > img {
+                    & > picture > img, & > picture {
                         width: 2rem;
                         height: auto;
+                        position: relative;
+                            &::after {
+                                    position: absolute;
+                                    content: '';
+                                    // bottom: 2rem;
+                                    width: 1px;
+                                    top: 4rem;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    height: 2rem;
+                                    background-color: var(--light-grey-6);
+                            }
+                        &.last {
+                            &::after {
+                                display: none;
+                            }
+                        }
                     }
                     & > div {
                         margin-left: 1rem; 
