@@ -10,7 +10,6 @@ const fileArray = [
         'course_content'
 ]
 
-
 const generatedHTMLWebpackPlugins = function(arr) {
     const res = []
     for (let i = 0; i < arr.length; i++) {
@@ -28,8 +27,6 @@ const generatedHTMLWebpackPlugins = function(arr) {
     }
     return res
 }
-
-console.log('isProduction', isProduction)
 
 module.exports = {
     entry: {
