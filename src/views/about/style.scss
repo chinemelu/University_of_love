@@ -1,4 +1,8 @@
 /* Extra small devices (phones, 320px and up) */
+:root {
+    --left-numbering-offset: 4px;
+}
+
 @media only screen and (min-width: 320px) {
     body {
         overflow-x: clip;
@@ -17,30 +21,76 @@
         }
     }
     .about {
-        position: relative;
-        background: linear-gradient(89.88deg, var(--primary) 0.1%, var(--secondary) 99.9%), url('../../images/home/home-cover-sm.png');
-        background: linear-gradient(89.88deg, var(--primary) 0.1%, var(--secondary) 99.9%), url('../../images/home/home-cover-sm.webp');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        overflow: hidden;        
-        height: 95rem;
+        &__banner-image {
+            position: relative;
+            background: url('../../images/about/friends-butt-heads-sm.png');
+            background: url('../../images/about/friends-butt-heads-sm.webp');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            overflow: hidden; 
+            height: 30rem;
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #000;
+                backdrop-filter: 3px;
+            }
+        }
         &__focus {
             list-style: none;
-            padding-left: 4rem;
+            padding-left: 3rem;
         }
         &__focus-item {
+            counter-increment: counter;
             margin-top: 2rem;
             & > p {
                 margin-top: 1rem;
             }
             & > h2 {
                 position: relative;
-                counter-reset: list-counter;
                 &::before {
                     position: absolute;
-                    counter-increment: list-counter(0);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: -2rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    content: counter(counter);
+                    font-size: 1rem;
+                    color: var(--white);
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    background-color: var(--light-blue-1);
                 }
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 1px;
+                    top: 4rem;
+                    left: calc(-2rem) + calc(1.3rem/2);
+                    transform: translateY(-50%);
+                    height: 2rem;
+                    background-color: var(--light-grey-6)
+                }
+            }
+            &.last {
+                & > h2 {
+                    &::after {
+                        display: none
+                    }
+                }    
+            }
+        }
+        &__features-section {
+            padding: 5rem 2rem;
+            & > article {
+                counter-reset: counter;
             }
         }
         &__main-heading, &__sub-heading {
@@ -195,6 +245,9 @@
         }
         &__features-section {
             padding: 5rem 2rem;
+            & > article {
+                counter-reset: counter;
+            }
         }
         &__how-it-works {
             padding: 5rem 2rem;
