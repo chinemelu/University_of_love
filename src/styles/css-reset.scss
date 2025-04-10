@@ -40,6 +40,38 @@ body {
     .nav-default {
         display: none
     }
+    .testimonial-card {
+        overflow-y: hidden;
+        position: relative;
+        &:first-child {
+            margin-top: 3.5rem;
+        }
+        &:not(:first-child) {
+            margin-top: 3rem
+        }
+
+        padding: 2.5rem;
+        border-radius: 2rem;
+        background-color: var(--light-grey-2);
+        font-size: 2rem;
+        color: var(--dark-blue-1);
+        &:hover {
+            background-color: var(--light-blue-2);
+            color: var(--white);
+        }
+        &__user-details {
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            margin-top: 3rem;
+            color: var(--black);
+            padding-right: 1rem;
+            & > img {
+                border-radius: 100%;
+                margin-right: 2rem;
+            }
+        }
+    }
     .footer {
         background-color: var(--dark-blue-2);
         color: var(--white);
@@ -160,6 +192,11 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .testimonial-card {
+        &:not(:first-child) {
+            margin-left: 2rem;
+        }
+    }
     .nav-default {
         display: block;
         box-shadow: 0px -5px 20px 0px #00000040;

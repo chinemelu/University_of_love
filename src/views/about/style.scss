@@ -19,8 +19,6 @@
             color: var(--light-blue-1);
             // transform: translateX(-50%);
         }
-    }
-    .about {
         &__banner-image {
             position: relative;
             background: url('../../images/about/friends-butt-heads-sm.png');
@@ -160,10 +158,27 @@
             }
             &--partners {
                 background-color: var(--cream);
-                & > p {
+                & > div {
                     margin-top: 2rem;
-                    font-size: 1.5rem;
-                    text-align: center;
+                    & > h2 {
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                    & > p {
+                        font-size: 1.5rem;
+                        color: var(--light-grey-4);
+                        margin-top: 1rem;
+                        text-align: center;
+                    }
+                }
+                &__button {
+                    width: 20rem;
+                    padding: 8px 1.5rem;
+                    border-radius: 10rem;
+                    margin: 3rem auto 2rem; 
+                    display: block;
+                    background-color: transparent;
                 }
                 &__cards {
                     display: flex;
@@ -213,153 +228,26 @@
                 }
             }
         }
+        &__testimonials {
+            & > div {
+                & > h2 {
+                    font-size: 2.5rem;
+                    text-align: center;
+                    margin-top: 2rem;
+                }
+                & > p {
+                    font-size: 1.5rem;
+                    color: var(--light-grey-1);
+                    text-align: center;
+                    margin-top: 1rem;
+                }
+            }
+        }
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .about {
-        overflow: initial;        
-        &__nav {
-            // margin-left: 10rem;
-            padding: 2rem 0 0;
-            width: 100%;
-        }
-        &__logo {
-            margin-left: 10rem;
-        }
-        &__nav-toggle {
-            display: none;
-        }
-        &__nav-toggle-element {
-            display: none
-        }
-        &__mid-screen-plus-nav {
-            display: block;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            & > li {
-                & > a {
-                    color: var(--white);
-                    font-size: 1.6rem;
-                    text-decoration: none;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-                margin-left: 2.5rem;
-                margin-right: 2.5rem;
-            }
-        }
-        &__mid-screen-plus-buttons {
-            &__container {
-                display: flex;
-                margin-right: 10rem
-            }
-        }
-        &__mid-screen-plus-button {
-            display: block;
-            font-size: 1.6rem;
-            &--login, &--get-started {
-                border-radius: 10rem;
-                color: var(--white);
-                padding: 1rem 1.5rem;
-            }
-            &--login {
-                border: 1px solid var(--white);
-                background-color: transparent;
-                margin-right: 1rem;
-
-            }
-            &--get-started {
-                border: none;
-                background-color: var(--light-blue-1);
-            }
-        }
-        &__image-text {
-            transform: translateX(0);
-            left: 0;
-            margin-left: 10rem;
-            position: relative;
-            width: 45%;
-        }
-        &__main-heading {
-            font-size: 3.2rem;
-            font-weight: 700;
-        }
-        &__sub-heading {
-            font-size: 2.4rem;
-            font-weight: 400;
-            margin-top: 2rem;
-        }
-        &__couple-image {
-            height: 25rem;
-            width: 21rem;
-            bottom: 26%;
-            left: 40%;
-            // outline: 3px solid var(--white);
-            // outline-offset: 3rem;
-        }
-
-        &__couple-image-container {
-            height: 25rem;
-            width: 21rem;
-            bottom: 28%;
-            left: 38%;
-        }
-        &__man-in-pocket {
-            display: inline-block;
-            position: absolute;
-            object-fit: cover;
-            height: 25rem;
-            width: 21rem;
-            outline: 3px solid var(--white);
-            border-radius: 10rem 10rem 10rem 0;
-            right: 10%;
-            bottom: -4%;
-            // outline: 3px solid var(--white);
-            // outline-offset: 3rem;
-        }
-
-        &__man-in-pocket-container {
-            display: inline-block;
-            position: absolute;
-            height: 25rem;
-            width: 21rem;
-            outline: 3px solid var(--white);
-            border-radius: 10rem 10rem 10rem 0;
-            bottom: -2%;
-            right: 12%;
-            z-index: 2;
-        }
-        &__inverted-couple {
-            display: inline-block;
-            position: absolute;
-            object-fit: cover;
-            height: 20rem;
-            width: 25rem;
-            bottom: 52%;
-            border-radius: 10rem 0 0 0;
-            // left: initial;
-            right: 0;
-            // outline: 3px solid var(--white);
-            // outline-offset: 3rem;
-        }
-
-        &__inverted-couple-container {
-            display: inline-block;
-            position: absolute;
-            outline: 3px solid var(--white);
-            border-radius: 10rem 0 0 0;
-            // left: initial;
-            height: 20rem;
-            width: 25rem;
-            bottom: 50%;
-            right: 2%;
-            z-index: 2;
-        }
-    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -369,208 +257,17 @@
             display: inline;
             margin: 0;
         }
-    }
-    .about {
-        &__features {
-            &__item {
-                // width: 30rem;
-                flex-direction: column;
-                flex-basis: 33.3%;
-                // align-items: center;
-                &:not(:first-child) {
-                    margin-top: 0;
-                }
+        &__cards {
+            display: flex;
+            flex-direction: row-reverse;
+            // justify-content: space-between;                
+            margin: 3rem auto;
+            width: 100%;
+            position: relative;
+            & > article {
+                // flex-basis: 18%;
+                border: 20px solid red;
             }
-        }
-        &__features {
-            padding: 5rem 0;
-            // display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-        }
-        &__how-it-works-section {
-            text-align: center;
-            &__heading {
-                display: inline;
-                margin: 0;
-
-            }
-        }
-        &__how-it-works {
-            &__item {
-                justify-content: space-between;
-                &--row {
-                    flex-direction: row;
-                }
-                &--row-reverse {
-                    flex-direction: row-reverse;
-                }
-                &:not(:first-child) {
-                    margin-top: 0;
-                }
-                & > picture > img {
-                    // flex-basis: 65%;
-                    width: 40rem;
-                    height: auto;
-                    object-fit: cover;
-                }
-            }
-            &__item-text {
-                flex-basis: 45%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                & > p {
-                    text-align: left;
-                }
-            }
-        }
-        &__what-we-offer-section, &__life-stories-section {    
-            padding: 5rem;   
-            & > h2 {
-                font-weight: 500;
-                display: inline-block;
-                border-bottom: 1px solid var(--light-blue-1);
-                color: var(--light-blue-1);
-                font-size: 2rem;
-                padding-right: 1rem;
-                margin-bottom: 2rem;
-            }
-            & > div  {
-                display: flex;
-                justify-content: space-between;
-                text-align: left;
-                & > h2 {
-                    flex-basis: 60%;
-                    text-align: inherit;
-                }
-                & > p {
-                    flex: 1;
-                    text-align: inherit;
-                }
-            }     
-        }
-
-        &__what-we-offer-section {
-            &__cards {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: 3rem
-            }
-            &__card {
-                // width: 100%;
-                // border: 2px solid red;
-                overflow-y: hidden;
-                position: relative;
-                flex-basis: 24%;
-                min-width: 25rem;
-                margin-top: 3rem;
-                &:first-child {
-                    margin-top: 0;
-                }
-                &:not(:first-child) {
-                    margin-top: 0
-                }
-                & > picture > img {
-                    position: relative;
-                    min-width: 100%;
-                    height: 40.3rem;
-                    object-fit: cover;
-                    border-radius: 1rem;
-                }
-            }
-            &__card-description {
-                position: absolute;
-                opacity: 0.85;
-                background: #00000094;
-                width: 100%;
-                bottom: 0; 
-                left: 0;
-                right: 0;
-                padding: 2.5rem 1.5rem;
-                backdrop-filter: blur(51px);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                & > h3 {
-                    font-weight: 500;
-                    color: var(--white);
-                    font-size: 1.6rem;
-                }
-                & > button {
-                    width: 15rem;
-                    padding: 5px 1rem;
-                    font-weight: 400;
-                    color: var(--white);
-                    font-size: 1.5rem;
-                    border: 1px solid var(--white);
-                    border-radius: 5rem;
-                    background-color: transparent;
-                    margin-top: 1rem;
-                }
-            }
-        }
-        &__life-stories-section {
-            overflow-x: auto;
-            &__cards {
-                flex-direction: row;
-            }
-            &__card {
-                flex-basis: 24%;
-                min-width: 25rem;
-                &:not(:first-child) {
-                    margin-left: 2rem;
-                }
-            }
-        }
-        &__relationship-wisdom-section {
-            overflow-x: auto;
-            &__carousel {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 3rem;
-            }
-            &__toggle-button {
-                display: inline-block;
-                background: transparent;
-                border: none;
-                cursor: pointer;
-            }
-            &__cards {
-                flex-direction: row-reverse;
-                justify-content: center;                
-                margin: 3rem auto;
-                width: 100%;
-                position: relative;
-            }
-            &__card {
-                position: absolute;
-                transform: translate(100%);
-                &:first-child {
-                    z-index: 4;
-                    right: 50%;
-                }
-                &:not(:first-child) {
-                    margin-top: 0
-                }
-                &:nth-child(2){ 
-                    z-index: 3;
-                    right: 40%;
-                }
-                &:nth-child(3){ 
-                    z-index: 2;
-                    right: 30%;
-                }
-                &:last-child{ 
-                    z-index: 1;
-                    right: 20%;
-                }
-            }
-           
         }
     }
 }
