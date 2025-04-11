@@ -178,6 +178,7 @@
                     border-radius: 10rem;
                     margin: 3rem auto 2rem; 
                     display: block;
+                    border: 1px solid var(--black);
                     background-color: transparent;
                 }
                 &__cards {
@@ -257,6 +258,32 @@
             display: inline;
             margin: 0;
         }
+        &__banner-image {
+            background: url('../../images/about/friends-butt-heads-lg.png');
+            background: url('../../images/about/friends-butt-heads-lg.webp');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            overflow: hidden; 
+            height: 50rem;
+            &:before {
+                background: rgba(0, 0, 0, 0.4);
+            }
+        }
+        &__banner-text {
+            position: absolute;
+            top: 30%;
+            width: 60%;
+            & > h2 {
+                font-size: 2.5rem;
+            } 
+            & > p {
+                font-size: 1.6rem;
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
         &__cards {
             display: flex;
             flex-direction: row-reverse;
@@ -267,6 +294,54 @@
             & > article {
                 // flex-basis: 18%;
                 border: 20px solid red;
+            }
+        }
+        &__section {
+            & > div:first-of-type {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-top: 2rem;
+                & > h2 {
+                    flex-basis: 30%;
+                    font-size: 2.5rem;
+                    text-align: left;
+                }
+                & > p {
+                    flex-basis: 30%;
+                    font-size: 1.5rem;
+                    margin-top: 0;
+                    margin-right: 10rem;
+                }
+            }
+            &--partners {
+                overflow-x: auto;
+                & > div {
+                    margin-top: 5rem;
+                }
+                &__cards {
+                    flex-direction: row;
+                    margin-top: 5rem;
+                    justify-content: flex-start;
+                }
+                &__card {
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    &:not(:first-child) {
+                        margin-top: 0;
+                    }
+                    &:not(:first-of-type) {
+                        margin-left: 2rem;
+                    }
+                    flex-basis: 30rem;
+                    height: auto;
+                    & > picture > img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
             }
         }
     }
