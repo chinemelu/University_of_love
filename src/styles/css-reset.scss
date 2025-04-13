@@ -76,8 +76,20 @@ body {
     .footer {
         background-color: var(--dark-blue-2);
         color: var(--white);
-        & .home__logo {
+        &__logo {
+            color: var(--white);
+            font-weight: 700;
             margin-left: 0;
+        }
+        &__logo-upper-text {
+            font-size: 1.4rem;
+            margin-top: 0;
+            font-weight: inherit;
+        }
+        &__logo-lower-text {
+            font-size: 0.8rem;
+            margin-top: 0;
+            font-weight: inherit;
         }
         & ul {
             list-style: none;
