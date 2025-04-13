@@ -32,6 +32,7 @@ body {
   --light-grey-6: #D4D4D4;
   --dark-blue-1: #0A3D62;
   --dark-blue-2: #032352;
+  --light-orange-1: #FFECDC;
 }
 
 
@@ -242,8 +243,8 @@ body {
             & > li  {
                 & > a {
                     font-size: 1.6rem;
-                    margin-left: 1rem;
-                    margin-right: 1rem;
+                    margin-left: 2.5rem;
+                    margin-right: 2.5rem;
                     text-decoration: none;
                     color: var(--black);
                     &:hover {
