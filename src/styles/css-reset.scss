@@ -20,6 +20,7 @@ body {
   --secondary: rgba(4, 50, 116, 0.9);
   --white: #fff;
   --black: #000;
+  --cream: #FEF9F5;
   --light-blue-1: #018CF0;
   --light-blue-2: #0056D2;
   --light-blue-3: #DCF1F8;
@@ -31,6 +32,7 @@ body {
   --light-grey-6: #D4D4D4;
   --dark-blue-1: #0A3D62;
   --dark-blue-2: #032352;
+  --light-orange-1: #FFECDC;
 }
 
 
@@ -39,11 +41,55 @@ body {
     .nav-default {
         display: none
     }
+    .testimonial-card {
+        overflow-y: hidden;
+        position: relative;
+        &:first-child {
+            margin-top: 3.5rem;
+        }
+        &:not(:first-child) {
+            margin-top: 3rem
+        }
+
+        padding: 2.5rem;
+        border-radius: 2rem;
+        background-color: var(--light-grey-2);
+        font-size: 2rem;
+        color: var(--dark-blue-1);
+        &:hover {
+            background-color: var(--light-blue-2);
+            color: var(--white);
+        }
+        &__user-details {
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            margin-top: 3rem;
+            color: var(--black);
+            padding-right: 1rem;
+            & > img {
+                border-radius: 100%;
+                margin-right: 2rem;
+            }
+        }
+    }
     .footer {
         background-color: var(--dark-blue-2);
         color: var(--white);
-        & .home__logo {
+        &__logo {
+            color: var(--white);
+            font-weight: 700;
             margin-left: 0;
+        }
+        &__logo-upper-text {
+            font-size: 1.4rem;
+            margin-top: 0;
+            font-weight: inherit;
+        }
+        &__logo-lower-text {
+            font-size: 0.8rem;
+            margin-top: 0;
+            font-weight: inherit;
         }
         & ul {
             list-style: none;
@@ -159,6 +205,11 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .testimonial-card {
+        &:not(:first-child) {
+            margin-left: 2rem;
+        }
+    }
     .nav-default {
         display: block;
         box-shadow: 0px -5px 20px 0px #00000040;
@@ -204,8 +255,8 @@ body {
             & > li  {
                 & > a {
                     font-size: 1.6rem;
-                    margin-left: 1rem;
-                    margin-right: 1rem;
+                    margin-left: 2.5rem;
+                    margin-right: 2.5rem;
                     text-decoration: none;
                     color: var(--black);
                     &:hover {

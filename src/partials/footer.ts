@@ -13,9 +13,9 @@ class FooterDefault extends HTMLElement {
                 <div id="root"></div>
                 <div class="footer__top">
                     <div class="footer__about">
-                        <div class="home__logo">
-                            <p class="home__logo-upper-text">VIRTUAL</p>
-                            <p class="home__logo-lower-text">LOVE ACADEMY</p>
+                        <div class="footer__logo">
+                            <p class="footer__logo-upper-text">VIRTUAL</p>
+                            <p class="footer__logo-lower-text">LOVE ACADEMY</p>
                         </div>
                         <p>Providing faith-based counseling to guide marriages and relationships 
                             with biblical wisdom. Our mission is to support individuals and 
