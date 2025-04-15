@@ -73,6 +73,35 @@ body {
             }
         }
     }
+    .next-steps {
+        padding: 5rem 2rem;
+        color: var(--white);
+        background-color: var(--light-blue-1);
+        text-align: center;
+        & > h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        & > p {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+        }
+        &__button {
+            margin-top: 2rem;
+            background-color: transparent;
+            border: none;
+            border-radius: 5rem;
+            padding: 1.5rem;
+            width: 20rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+            &--outline-white {
+                border: 1px solid var(--white);
+                color: var(--white);
+                margin-right: 1rem;
+            }
+        }
+    }
     .footer {
         background-color: var(--dark-blue-2);
         color: var(--white);
