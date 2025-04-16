@@ -7,6 +7,7 @@ const fileArray = [
         'contact',
         'about',
         'content_pages',
+        'course',
         'course_content'
 ]
 
@@ -33,6 +34,7 @@ module.exports = {
         home: './src/views/home/index.ts',
         contact: './src/views/contact/index.ts',
         about: './src/views/about/index.ts',
+        course: './src/views/course/index.ts',
         course_content: './src/views/course_content/index.ts',
         content_pages: './src/views/content_pages/index.ts'
     },
