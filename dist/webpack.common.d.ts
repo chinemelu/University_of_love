@@ -3,6 +3,7 @@ export namespace entry {
     let home: string;
     let contact: string;
     let about: string;
+    let course: string;
     let course_content: string;
     let content_pages: string;
 }

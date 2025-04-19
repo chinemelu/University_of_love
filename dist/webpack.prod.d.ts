@@ -3,6 +3,7 @@ declare const _exports: {
         home: string;
         contact: string;
         about: string;
+        course: string;
         course_content: string;
         content_pages: string;
     };
