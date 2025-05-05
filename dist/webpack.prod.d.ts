@@ -17,13 +17,6 @@ declare const _exports: {
             loader?: undefined;
         } | {
             test: RegExp;
-            use: string[];
-            exclude?: undefined;
-            type?: undefined;
-            generator?: undefined;
-            loader?: undefined;
-        } | {
-            test: RegExp;
             type: string;
             generator: {
                 filename: string;
