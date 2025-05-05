@@ -1,3 +1,5 @@
+@use "./_variable";
+
 *,
 *::before,
 *::after {
@@ -50,7 +52,6 @@ body {
         }
     }
 }
-
 
 :root {
   --primary: rgba(1, 140, 240, 0.9);
