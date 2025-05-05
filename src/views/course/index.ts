@@ -8,7 +8,18 @@ import '../../partials/NextSteps'
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    const courseTemplate = document.getElementById("course-template") as HTMLTemplateElement
+    const courseTemplateContent = <DocumentFragment>courseTemplate.content.cloneNode(true);
+    const courseSection = courseTemplateContent.firstElementChild
+    const backdropImageSection = document.getElementById('backdrop-image-section')
+    backdropImageSection.insertAdjacentElement('afterend', courseSection)
+
+    const courseDetailsTemplate = document.getElementById('course-details-template') as HTMLTemplateElement
+    const courseDetailsTemplateContent = courseDetailsTemplate.content.cloneNode(true)
+    const courseDetailsElement = (courseDetailsTemplateContent as DocumentFragment).firstElementChild
+
     const selectEl = document.querySelector('.course__select-course')
+
     const optionsArray = [
         'All',
         'Love',
@@ -17,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Depression',
         'Individual'
     ]
+
     for (let i = 0; i < optionsArray.length; i++) {
         const el = optionsArray[i]
         const option = document.createElement('option')
@@ -29,7 +41,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     Array.from(buttons).forEach(btn => {
         (btn as HTMLButtonElement).addEventListener('click', () => {
-          window.location.href = 'course_content.html'
+            courseSection.remove()
+            backdropImageSection.insertAdjacentElement('afterend', courseDetailsElement)
+
+            const tabs = document.querySelector('.course__details__tabs') 
+            const tabChildren = tabs.children as HTMLCollectionOf<HTMLLIElement>
+            if (tabs) {
+                // add active to the first tab
+                // console.log('tabs children', tabs.children[0])
+                tabChildren[0].classList.add('active')
+                const defaultTabSuffix = tabChildren[0].dataset.tab
+                const defaultTabTemplateId = `tab-content__${defaultTabSuffix}`
+                const defaultTabTemplate = document.getElementById(defaultTabTemplateId) as HTMLTemplateElement
+                const defaultTabTemplateContent = <DocumentFragment>defaultTabTemplate.content.cloneNode(true)
+                const defaultTabTemplateElement = defaultTabTemplateContent.firstElementChild
+                tabs.insertAdjacentElement('afterend', defaultTabTemplateElement)
+                let tabTemplateElement = defaultTabTemplateElement
+
+                Array.from(tabChildren).forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        Array.from(tabChildren).forEach(tab => {
+                            tabTemplateElement.remove()
+                            tab.classList.remove('active')
+                        })
+                        const tabSuffix = tab.dataset.tab
+                        const tabTemplateId = `tab-content__${tabSuffix}`
+                        console.log('tabTemplateId', tabTemplateId)
+                        const tabTemplate = document.getElementById(tabTemplateId) as HTMLTemplateElement
+                        const tabTemplateContent = <DocumentFragment>tabTemplate.content.cloneNode(true)
+                        tabTemplateElement = tabTemplateContent.firstElementChild
+                        tab.classList.add('active')
+                        tabs.insertAdjacentElement('afterend', tabTemplateElement)
+                    })
+                })
+            }
         })
     })
+    
 })
