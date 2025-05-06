@@ -334,7 +334,36 @@ body {
                         text-decoration: underline
                     }
                 }
-            }      
+            }
+            & > li.services {
+                position: relative;
+                & > ul {
+                    border: 1px solid var(--light-grey-4);
+                    list-style-type: none;
+                    position: absolute;
+                    z-index: 100;
+                    background-color: var(--white);
+                    width: 20rem;
+                    text-align: center;
+                    top: 3rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    & > li {
+                        font-size: 1.5rem;
+                        padding: 1.5rem 1rem;
+                        & > a {
+                            text-decoration: none;
+                            color: var(--black);
+                        }
+                        &:hover {
+                            background-color: var(--light-blue-1);
+                            & > a {
+                                color: var(--white)
+                            }
+                        }
+                    }
+                }
+            }    
         }
         &__buttons-container {
             display: flex;
