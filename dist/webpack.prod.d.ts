@@ -6,6 +6,10 @@ declare const _exports: {
         course: string;
         course_content: string;
         content_pages: string;
+        individual: string;
+        "pre-marital-counselling": string;
+        "breakup-recovery": string;
+        "couple-therapy": string;
     };
     module: {
         rules: ({

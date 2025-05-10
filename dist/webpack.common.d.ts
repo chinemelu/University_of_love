@@ -1,12 +1,16 @@
 import HtmlWebpackPlugin = require("html-webpack-plugin");
-export namespace entry {
-    let home: string;
-    let contact: string;
-    let about: string;
-    let course: string;
-    let course_content: string;
-    let content_pages: string;
-}
+export let entry: {
+    home: string;
+    contact: string;
+    about: string;
+    course: string;
+    course_content: string;
+    content_pages: string;
+    individual: string;
+    "pre-marital-counselling": string;
+    "breakup-recovery": string;
+    "couple-therapy": string;
+};
 export namespace module {
     let rules: ({
         test: RegExp;
