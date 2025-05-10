@@ -8,7 +8,11 @@ const fileArray = [
         'about',
         'content_pages',
         'course',
-        'course_content'
+        'course_content',
+        'individual',
+        'pre-marital-counselling',
+        'breakup-recovery',
+        'couple-therapy'
 ]
 
 const generatedHTMLWebpackPlugins = function(arr) {
@@ -36,7 +40,11 @@ module.exports = {
         about: './src/views/about/index.ts',
         course: './src/views/course/index.ts',
         course_content: './src/views/course_content/index.ts',
-        content_pages: './src/views/content_pages/index.ts'
+        content_pages: './src/views/content_pages/index.ts',
+        individual: './src/views/individual/index.ts',
+        "pre-marital-counselling": './src/views/pre-marital-counselling/index.ts',
+        "breakup-recovery": './src/views/breakup-recovery/index.ts',
+        "couple-therapy": './src/views/couple-therapy/index.ts'
     },
     module: {
         rules: [

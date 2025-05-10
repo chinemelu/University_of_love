@@ -11,7 +11,16 @@ class NavDefault extends HTMLElement {
                 <ul>
                     <li><a href="course.html">Course</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li class="services" id="services">
+                            <a href="#">Services</a>
+                            <input id="services" type="checkbox">
+                        <ul>
+                            <li><a href="couple-therapy.html">Couple Therapy</a></li>
+                            <li><a href="individual.html">Individual</a></li>
+                            <li><a href="pre-marital-counselling.html">Pre-Marital Counselling</a></li>
+                            <li><a href="breakup-recovery.html">Breakup Recovery</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
 

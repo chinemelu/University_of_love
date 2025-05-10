@@ -1,0 +1,106 @@
+/* Extra small devices (phones, 320px and up) */
+:root {
+    --left-numbering-offset: 4px;
+}
+
+@media only screen and (min-width: 320px) {
+    .course {
+        &__heading {
+            font-size: 2rem;
+            text-decoration: underline;
+            padding: 0;
+            font-weight: 500;
+            // margin-left: 50%;
+            // width: 80%;
+            text-align: center;
+            color: var(--light-blue-1);
+            // transform: translateX(-50%);
+        }
+        &__backdrop-image {
+            position: relative;
+            background: url('../../images/course/couple-embrace.png');
+            background: url('../../images/course/couple-embrace.webp');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            overflow: hidden; 
+            height: 30rem;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.3);
+            }
+        }
+        &__banner-text {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20%;
+            width: 90%;
+            & > h2 {
+                font-size: 2rem;
+                font-weight: 700;
+            } 
+            & > p {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                font-weight: 500;
+            }
+            & > h2, & > p {
+                color: var(--white);
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .course {
+        &__heading {
+            display: inline;
+            margin: 0;
+        }
+        &__backdrop-image {
+            background: url('../../images/course/couple-embrace-lg.png');
+            background: url('../../images/course/couple-embrace-lg.webp');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            overflow: hidden; 
+            height: 50rem;
+            &:before {
+                background: rgba(0, 0, 0, 0.4);
+            }
+        }
+        &__banner-text {
+            position: absolute;
+            top: 30%;
+            width: 60%;
+            & > h2 {
+                font-size: 3rem;
+            } 
+            & > p {
+                font-size: 1.8rem;
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
