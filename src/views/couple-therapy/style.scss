@@ -98,6 +98,7 @@
                     font-size: 1.4rem;
                     margin-top: 1rem;
                     // margin-bottom: 2rem;
+                    color: var(--light-grey-1);
                     text-align: center;
                 }
                 & > ul {
@@ -144,6 +145,7 @@
                         }
                         & > p:nth-child(2) {
                             font-size: 1.2rem;
+                            color: var(--light-grey-1);
                         }
                     }
                 }
@@ -251,11 +253,18 @@
 @media only screen and (min-width: 768px) {
     .services {
         &__heading {
+            text-align: left;
             display: inline;
             margin-bottom: 2rem;
+            font-size: 2.4rem;
         }
         &__section {
-            padding: 4rem 3rem;
+            padding: 4rem 5%;
+        }
+        &__secondary-heading {
+            font-size: 2rem;
+            // font-weight: 500;
+            text-align: left;
         }
         &__backdrop-image {
             background: url('../../images/services/ct-1-lg.png');
@@ -303,13 +312,82 @@
         }
         &__aside {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            &:not(.services__aside.last){
+                margin-bottom: 10rem;
+            }
             & > picture {
                 & > img {
                     display: inline-block;
                     width: 40rem;
                     height: 30rem;
                     object-fit: cover;
+                    border-radius: 1rem;
+                }
+            }
+            & > * {
+                flex-basis: 50%;
+            }
+            & > article {
+                & > p {
+                    font-size: 1.8rem;
+                    // margin-top: 1rem;
+                    // margin-bottom: 2rem;
+                    text-align: left;
+                }
+                & > ul {
+                    margin-top: 1.5rem;
+                    margin-left: 3rem;
+                    & > li {
+                        list-style: none;
+                        position: relative;
+                        height: 4rem;
+                        &::before {
+                            // position: absolute;
+                            // content: counter(counter);
+                            // background-color: var(--light-blue-1);
+                            // color: var(--white);
+                            // counter-increment: counter;
+                            left: -3rem;
+                            width: 2rem;
+                            font-size: 1.6rem;
+                            // font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 2rem;
+                        }
+                        &:not(:last-child) {
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                background-color: var(--light-grey-6);
+                                width: 1px;
+                                top: 4rem;
+                                left: calc(-3rem) + calc(2rem/2);
+                                transform: translateY(-50%);
+                                height: 2rem;
+                            }
+                        }
+                        &:not(:first-child) {
+                            margin-top: 2rem;
+                        }
+                        & > p:first-child {
+                            font-size: 1.8rem;
+                            // margin-bottom: 2px; 
+                            // font-weight: 500;
+                        }
+                        & > p:nth-child(2) {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                & > button {
+                    font-size: 1.6rem;
+                    width: 15rem;
+                    padding: 1.5rem;
+                    margin-top: 4rem;
+                    display: inline-block;
                 }
             }
         }
@@ -319,6 +397,13 @@
             grid-template-rows: auto;
             justify-content: space-between;
             row-gap: 3rem;
+        }
+        &__related-courses-section {
+            & > h2 {
+                text-align: left;
+                font-size: 2.4rem;
+                color: var(--light-blue-1);
+            }
         }
         &__related-courses {
             flex-direction: row;
@@ -342,6 +427,7 @@
                     width: 100%;
                     height: 20rem;
                     object-fit: cover;
+
                 }
             }
         }
