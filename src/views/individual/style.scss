@@ -376,15 +376,9 @@
                         position: relative;
                         height: 5rem;
                         &::before {
-                            // position: absolute;
-                            // content: counter(counter);
-                            // background-color: var(--light-blue-1);
-                            // color: var(--white);
-                            // counter-increment: counter;
                             left: -3rem;
                             width: 2rem;
                             font-size: 1.6rem;
-                            // font-weight: 500;
                             display: flex;
                             align-items: center;
                             justify-content: center;
