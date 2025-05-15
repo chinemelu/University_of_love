@@ -88,7 +88,7 @@
         &__aside {
             display: flex;
             flex-direction: column;
-            & > picture {
+            & > div > picture {
                 & > img {
                     display: none
                 }
@@ -313,16 +313,49 @@
         &__aside {
             display: flex;
             flex-direction: row;
+            align-items: center;
             &:not(.services__aside.last){
                 margin-bottom: 10rem;
             }
-            & > picture {
-                & > img {
-                    display: inline-block;
-                    width: 40rem;
-                    height: 30rem;
-                    object-fit: cover;
-                    border-radius: 1rem;
+            & > div  {
+                & > picture {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -2rem;
+                        height: 32rem;
+                        width: 32rem;
+                        z-index: -1;
+                        border-radius: 2rem;
+                    }
+                    &.left {
+                        &::before {
+                            left: -2rem;
+                        }
+                    }
+                    &.right {
+                        &::before {
+                            right: -2rem;
+                        }
+                    }
+                    &.cream {
+                        &::before {
+                            background-color: var(--cream-1);
+                        }
+                    }
+                    &.blue {
+                        &::before {
+                            background-color: var(--light-blue-1);
+                        }
+                    }
+                    & > img {
+                        display: inline-block;
+                        width: 40rem;
+                        height: 40rem;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                    }
                 }
             }
             & > * {
