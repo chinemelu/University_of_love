@@ -4,22 +4,31 @@
 }
 
 @media only screen and (min-width: 320px) {
-    .course {
+    .services {
+        &__section {
+            padding: 2.5rem 2rem;
+        }
         &__heading {
             font-size: 2rem;
             text-decoration: underline;
             padding: 0;
             font-weight: 500;
-            // margin-left: 50%;
-            // width: 80%;
             text-align: center;
             color: var(--light-blue-1);
-            // transform: translateX(-50%);
+            &:not(.services__heading.first) {
+                margin-top: 2rem;
+            }
+        }
+        &__secondary-heading {
+            font-size: 1.8rem;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 1rem;
         }
         &__backdrop-image {
             position: relative;
-            background: url('../../images/course/couple-embrace.png');
-            background: url('../../images/course/couple-embrace.webp');
+            background: url('../../images/services/indv-1-sm.png');
+            background: url('../../images/services/indv-1-sm.webp');
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
@@ -54,6 +63,184 @@
                 color: var(--white);
                 text-align: center;
             }
+            & > div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 2rem;
+                & > button {
+                    width: 15rem;
+                    border-radius: 5rem;
+                    padding: 1rem;
+                    border: none;
+                    font-size: 1.4rem;
+                }
+                & > button:first-child {
+                    color: var(--light-blue-1)
+                }
+                & > button:nth-child(2) {
+                    background: transparent;
+                    color: var(--white);
+                    border: 1px solid var(--white);
+                }
+            }
+        }
+        &__aside {
+            display: flex;
+            flex-direction: column;
+            & > div > picture {
+                & > img {
+                    display: none
+                }
+            }
+            & > article {
+                & > p {
+                    font-size: 1.4rem;
+                    margin-top: 1rem;
+                    // margin-bottom: 2rem;
+                    color: var(--light-grey-1);
+                    text-align: center;
+                }
+                & > ul {
+                    margin-top: 1.5rem;
+                    margin-left: 3rem;
+                    counter-reset: counter;
+                    & > li {
+                        list-style: none;
+                        position: relative;
+                        height: 4rem;
+                        &::before {
+                            position: absolute;
+                            content: counter(counter);
+                            background-color: var(--light-blue-1);
+                            color: var(--white);
+                            counter-increment: counter;
+                            left: -3rem;
+                            width: 1.5rem;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 1.5rem;
+                        }
+                        &:not(:last-child) {
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                background-color: var(--light-grey-6);
+                                width: 1px;
+                                top: 4rem;
+                                left: calc(-3rem) + calc(1.3rem/2);
+                                transform: translateY(-50%);
+                                height: 2rem;
+                            }
+                        }
+                        &:not(:first-child) {
+                            margin-top: 2rem;
+                        }
+                        & > p:first-child {
+                            font-size: 1.4rem;
+                            margin-bottom: 2px;
+                            font-weight: 500;
+                        }
+                        & > p:nth-child(2) {
+                            font-size: 1.2rem;
+                            color: var(--light-grey-1);
+                        }
+                    }
+                }
+                & > button {
+                    font-size: 1.4rem;
+                    width: 15rem;
+                    padding: 1rem;
+                    background-color: var(--light-blue-1);
+                    margin-top: 4rem;
+                    display: block;
+                    margin-right: auto;
+                    margin-left: auto;
+                    border: none;
+                    border-radius: 5rem;
+                    color: var(--white)
+                }
+            }
+        }
+        &__related-courses-section {
+            & > h2 {
+                text-align: center;
+                font-size: 1.8rem;
+            }
+        }
+        &__related-courses {
+            &__view-all {
+                &--mobile {
+                    font-size: 1.4rem;
+                    margin-top: 1rem;
+                    text-align: right;
+                    & > a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        &__related-courses {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto
+        }
+        &__related-course-card {
+            background-color: var(--light-blue-4);
+            padding: 1.5rem;
+            border-radius: 2rem;
+            &:not(:first-child) {
+                margin-top: 3rem;
+            }
+            & > picture {
+                & > img {
+                    border-radius: 1.5rem;
+                    width: 100%;
+                    height: 20rem;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__course-card-description {
+            margin-top: 1rem;
+            & > h3 {
+                font-size: 1.6rem;
+            }
+            & > p {
+                font-size: 1.5rem;
+                margin-top: 5px;
+            }
+            & > div {
+                display: flex;
+                align-items: center;
+                margin-top: 2rem;
+                justify-content: space-between;
+                & > div {
+                    display: flex;
+                    align-items: center;
+                    & > p {
+                        font-size: 1.4rem;
+                        margin-left: 4px
+                    }
+                    & > img {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
+                }
+                & > button {
+                    padding: 8px 1rem;
+                    border-radius: 3rem;
+                    background-color: var(--light-blue-2);
+                    border: none;
+                    font-size: 1.3rem;
+                    color: var(--white)
+                }
+            }
+
         }
     }
 }
@@ -64,36 +251,224 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .course {
+    .services {
         &__heading {
+            text-align: left;
             display: inline;
-            margin: 0;
+            margin-bottom: 2rem;
+            font-size: 2.4rem;
+        }
+        &__section {
+            padding: 4rem 5%;
+        }
+        &__secondary-heading {
+            font-size: 2rem;
+            // font-weight: 500;
+            text-align: left;
         }
         &__backdrop-image {
-            background: url('../../images/course/couple-embrace-lg.png');
-            background: url('../../images/course/couple-embrace-lg.webp');
+            background: url('../../images/services/indv-1-lg.png');
+            background: url('../../images/services/indv-1-lg.webp');
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
             overflow: hidden; 
-            height: 50rem;
+            height: 60rem;
             &:before {
                 background: rgba(0, 0, 0, 0.4);
+            }
+            & > p {
+                position: absolute; 
+                right: 12%;
+                font-size: 2rem;
+                bottom: 5%;
+                color: var(--white);
             }
         }
         &__banner-text {
             position: absolute;
             top: 30%;
-            width: 60%;
+            width: 33%;
+            left: 15%;
+            transform: translateX(0);
             & > h2 {
                 font-size: 3rem;
+                text-align: left;
             } 
             & > p {
                 font-size: 1.8rem;
-                width: 80%;
                 margin-right: auto;
                 margin-left: auto;
                 font-weight: 400;
+                text-align: left;
+            }
+            & > div {
+                & > button {
+                    width: 20rem;
+                    padding: 1.5rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        &__aside {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &:not(.services__aside.last){
+                margin-bottom: 10rem;
+            }
+            & > div  {
+                & > picture {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -2rem;
+                        height: 32rem;
+                        width: 32rem;
+                        z-index: -1;
+                        border-radius: 2rem;
+                    }
+                    &.left {
+                        &::before {
+                            left: -2rem;
+                        }
+                    }
+                    &.right {
+                        &::before {
+                            right: -2rem;
+                        }
+                    }
+                    &.cream {
+                        &::before {
+                            background-color: var(--cream-1);
+                        }
+                    }
+                    &.blue {
+                        &::before {
+                            background-color: var(--light-blue-1);
+                        }
+                    }
+                    & > img {
+                        display: inline-block;
+                        width: 40rem;
+                        height: 40rem;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+            & > * {
+                flex-basis: 50%;
+            }
+            & > article {
+                & > p {
+                    font-size: 1.8rem;
+                    // margin-top: 1rem;
+                    // margin-bottom: 2rem;
+                    text-align: left;
+                }
+                & > ul {
+                    margin-top: 1.5rem;
+                    margin-left: 3rem;
+                    & > li {
+                        list-style: none;
+                        position: relative;
+                        height: 5rem;
+                        &::before {
+                            left: -3rem;
+                            width: 2rem;
+                            font-size: 1.6rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 2rem;
+                        }
+                        &:not(:last-child) {
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                background-color: var(--light-grey-6);
+                                width: 1px;
+                                top: 4.5rem;
+                                left: calc(-3rem) + calc(2rem/2);
+                                transform: translateY(-50%);
+                                height: 2.5rem;
+                            }
+                        }
+                        &:not(:first-child) {
+                            margin-top: 2rem;
+                        }
+                        & > p:first-child {
+                            font-size: 1.8rem;
+                            width: 80%;
+                        }
+                        & > p:nth-child(2) {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                & > button {
+                    font-size: 1.6rem;
+                    width: 15rem;
+                    padding: 1.5rem;
+                    margin-top: 4rem;
+                    display: inline-block;
+                }
+            }
+        }
+        &__course-cards {
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-template-rows: auto;
+            justify-content: space-between;
+            row-gap: 3rem;
+        }
+        &__related-courses-section {
+            & > h2 {
+                text-align: left;
+                font-size: 2.4rem;
+                color: var(--light-blue-1);
+            }
+        }
+        &__related-courses {
+            flex-direction: row;
+            margin-left: 0;
+            margin-right: 0;
+            overflow-x: auto;
+            &__view-all {
+                &--mobile {
+                    display: none
+                }
+            }
+        }
+        &__related-course-card {
+            padding: 1.5rem;
+            &:not(:first-child) {
+                margin-top: 0;
+            }
+            & > picture {
+                & > img {
+                    border-radius: 1.5rem;
+                    width: 100%;
+                    height: 20rem;
+                    object-fit: cover;
+
+                }
+            }
+        }
+        &__related-course-card {
+            min-width: 35rem;
+            &:not(:first-child) {
+                margin-left: 3rem;
+            }
+        }
+        &__course-card-description {
+            & > h3 {
+                height: 3rem;
+            }
+            & > p {
+                height: 4rem;
             }
         }
     }
